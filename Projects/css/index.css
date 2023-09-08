@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;/*清楚列表样式*/
+}
+
+a{
+    text-decoration: none; /*清除下划线*/
+    color: black; /*把默认颜色改为黑色*/
+}
+html,body{
+    height: 100; /*设置高度默认跟浏览器一样*/
+}
+
+/*导航栏*/
+.nav{
+    position: fixed;
+    z-index: 999;/*设置层级 不要被覆盖*/
+    width: 100%;
+    height: 65px;
+    background-color: #464647;
+    /*设置透明度*/
+    /*rgba值和opacit区别 一个是属性可以在父级设置并且继承 一个是属性值只对当前设置的有效*/
+    opacity: 0.7;
+}
+/*背景视频主题*/
+.home{
+    position: relative;/*相对定位*/
+    width: 100%;
+    height: 940px;
+    /* background-color: pink; */
+}
+
+.wx-bg{
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+.wx-bg>video{
+    width: 100%;
+    height: 100%;
+    /*等比例大小铺满视频*/
+    object-fit: cover;
+}
+.nav-wrap{
+    display: flex;
+    width: 1200px;
+    height: 100%;
+    /* background-color: seagreen; */
+    margin: auto;
+    justify-content: space-between;/*两端对齐*/
+
+}
+
+/*标题logo*/
+.logo{
+    width: 150px;
+    height: 100%;
+    text-align: center;
+    font-size: 21px;
+    font-family: '仿宋';
+    line-height: 65px;
+    color: #fff;
+}
+
+/*导航列表*/
+.nav-list{
+    display: flex;
+    justify-content: space-around;/*均分布局*/
+    width: 400px;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.nav-list>li{
+    width: 62px;
+    height: 65px;
+    /* background-color: brown; */
+    font-size: 15px;
+    text-align: center;
+    line-height: 65px;
+    color: #fff;
+    font-family: '楷体';
+
+}
+
+.nav-list>li:hover{
+    color: #ccc;
+    cursor: pointer; /*鼠标经过或点击有小手样式*/
+}
+
+/*内部标题*/
+.home-content{
+    position: absolute;/*绝对定位*/
+    top: 30%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 700px;
+    height: 400px;
+    /* background-color: aqua; */
+
+    display: flex;
+    flex-direction: column;/*主轴上往下布局*/
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.home-content>p{
+    width: 480px;
+    height: 50px;
+    font-size: 35px;
+    color: #dddfd4;
+    /* background-color: red; */
+    letter-spacing: 5px; /*字体间距*/
+}
+
+.home-content>h1{
+    color: #dddfd4;
+    letter-spacing: 15px;
+    font-family: '楷体';
+}
+
+/*滚动效果*/
+.roll-box{
+    position: relative;
+    top: 40px;
+    left: 0px;
+    width: 35px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+/*当做滚动小点*/
+.roll-box>span{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 13px;
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border-radius: 15px;
+    /*动画效果*/
+    animation: moth 2s infinite;
+}
+/*开启动画 动画名*/
+@keyframes moth{
+    100%{
+        /*透明度为0*/
+        opacity: 0;
+        top: 46px;
+    }
+}
+
+/*简介模块*/
+.author{
+    width: 100%;
+    height: 500px;
+    background-color: #EEEEEE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-wrap{
+    width: 1200px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.person-box{
+    width: 300px;
+    height: 80%;
+    /* background-color: pink; */
+}
+
+.person-box>h2{
+    color: rgb(83, 199, 241);
+    padding-bottom: 60px;
+}
+
+.person-box>p{
+    color: rgb(83, 199, 241);
+    font-size: 17px;
+    font-family: '楷体';
+    line-height: 45px;
+}
+
+.author-wrap>img{
+    width: 276px;
+    height: 276px;
+    border-radius: 50%;  /*设置圆圈*/
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    
+}
+.card>img{
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.card>.text{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(83, 199, 241);
+}
+
+/*作品容器*/
+.works{
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-content{
+    width: 1200px;
+    height: 600px;
+    /* background-color: aquamarine; */
+}
+
+.message{
+    width: 100%;
+    height: 120px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.works-left{
+    width: 300px;
+    height: 100%;
+    /* background-color: pink; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.works-left>h2{
+    line-height: 40px;
+    border-bottom: 1px solid black;
+}
+
+.btn{
+    width: 140px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #fff;
+    letter-spacing: 2px;
+}
+
+.works-pic{
+    width: 100%;
+    height: 480px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around; /*行与行之间的对齐*/
+}
+
+.works-pic>li{
+    width: 290px;
+    height: 225px;
+}
+.works-pic>li>img{
+    width: 100%;
+    height: 100%;
+}
+
+.works-pic>li:hover{
+    cursor: pointer;/*小手标*/
+    /*盒子隐形效果*/
+    box-shadow:2px 10px 15px #333;
+}
+
+.Browse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 260px;
+    background-color: rgb(238, 238, 238);
+}
+
+.Browse-warp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 200px;
+    /* background-color: orange; */
+}
+
+.Browse-warp>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.Browse-ico{
+    width: 100px;
+    height: 80px;
+    /* background-color: pink; */
+    line-height: 40px;
+    color: rgb(175, 176, 176);
+    text-align: center; /*文字居中样式会默认继承父级*/
+}
+/*日志模块*/
+#journal{
+    width: 100%;
+    height: 1000px;
+    /* background-color: red; */
+}
+
+.journal-content{
+    width: 1200px;
+    height: 96%;
+    /* background-color: pink; */
+    margin: auto;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+.journal-title{
+    width: 200px;
+    height: 65px;
+    /* background-color: green; */
+    text-align: center;
+    line-height: 65px;
+    font-family: '楷体';
+    letter-spacing: 5px;
+}
+
+/*日志列表*/
+.journal-list{
+    width: 100%;
+    height: 89%;
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.journal-list>li{
+    width: 290px;
+    height: 400px;
+    /* background-color: #5015f5; */
+    border-radius: 14px;
+    overflow: hidden;
+    /*超出隐藏 溢出隐藏*/
+
+
+}
+.pic-img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.pic-img>img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+/*悬停盒子 放大效果*/
+.pic-img:hover img{
+    /*缩放效果 0-1取值 大于1是放大 小于1是缩小*/
+    transform: scale(1.3);
+}
+
+.journal-text{
+    width: 90%;
+    /* background-color: pink; */
+    line-height: 45px;
+    margin-left: 16px;
+}
+.journal-list>li:hover{
+    cursor: pointer;
+    /*阴影效果*/
+    box-shadow: 4px 2px 15px #333;
+}
+
+.journal-text>h3{
+    color: rgb(60, 163, 237);
+    letter-spacing: 3px;
+}
+.journal-text>p:nth-child(1){
+    color: #999;
+}
+.journal-text>p:nth-of-type(2){
+    color: #999;
+}
+
+/*悬停到li盒子 修改h3标题的文字颜色*/
+.journal-list>li:hover h3{
+    color: tan;
+}
+/*查看按钮*/
+.all-box{
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+/*留言模块*/
+#footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(255, 255, 255)
+}
+
+.footer-wrap{
+    width: 1200px;
+    height: 100%;
+    background-image: url(../img/13.png);
+    border-radius: 14px;
+
+}
+
+.footer-wrap>p{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    /* background-color: orange; */
+    font-family: '宋体';
+    text-indent: 1em;/*首行缩进*/
+}
+
+.message-box{
+    position: relative;
+    top: 20px;
+    width: 1000px;
+    height: 420px;
+    /* background-color: aqua; */
+    margin: auto;
+    box-shadow: 0px 15px 35px #ccc;
+    border-radius: 10px;
+}
+
+.message-input{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message-input>input{
+    width: 300px;
+    height: 60px;
+    text-indent: 1em;
+    outline: none; /*取消焦点*/
+    border-color: transparent; /*边框透明色*/
+    letter-spacing: 3px;
+    border-bottom: 1px dashed skyblue;
+}
+
+.message-input>input:focus{
+    /*聚焦底部边框颜色*/
+    border-bottom-color:orange ;
+}
+
+#textarea{
+    width: 100%;
+    height: 250px;
+    /* background-color: pink; */
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    color: red;
+    font-size: 15px;
+    text-indent: 1em;
+    background-image: url(../img/fan.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.but{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: skyblue;
+    color: #fff;
+    border-radius: 5px;
+}
